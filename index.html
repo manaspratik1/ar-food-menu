@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pancake AR Experience</title>
+
+  <!-- Load Google Model Viewer -->
+  <script type="module"
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js">
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #faf7f2;
+      color: #302820;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 5px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 450px;
+      background: #f1e8dc;
+      border-radius: 20px;
+    }
+
+    .ar-button {
+      background: #302820;
+      color: white;
+      border: none;
+      padding: 15px 28px;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .ar-button:hover {
+      background: #74563b;
+    }
+
+    .instructions {
+      color: #75695f;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Pancake Experience</h1>
+    <p>Explore your food in 3D and AR</p>
+  </header>
+
+  <main class="container">
+
+    <model-viewer
+      id="foodModel"
+      src="./models/pancakes.glb"
+      alt="3D pancake model"
+      camera-controls
+      auto-rotate
+      shadow-intensity="1"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      ar-placement="floor"
+      environment-image="neutral">
+
+      
+
+    </model-viewer>
+
+    <h2>Golden Pancakes</h2>
+
+    <p>
+      Explore this delicious pancake model.
+      Rotate, zoom and view it in your surroundings.
+    </p>
+
+    <p class="instructions">
+      Drag to rotate · Scroll to zoom · Tap View in AR
+    </p>
+
+  </main>
+
+</body>
+</html>
